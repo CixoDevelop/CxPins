@@ -1,37 +1,37 @@
-#CxPins lib
+# CxPins lib
 
-##About it:
+## About it:
  * This library is part of the CxFramework for AVR.
  * It can be used without the rest of the framework.
  * It provides convenient holders for the pins of the microcontroller, so that they can
    be passed as, for example, a function parameter
  * Author: Cixo
 
-##Instaling it (without CxFramework)
+## Instaling it (without CxFramework)
  * On linux run
  ```bash
  chmod +x InstallIt.sh
  sudo ./InstallIt.sh
  ```
 
-##How to use it?
+## How to use it?
 
-###Simple example
+### Simple example
 If the easiest way to learn from examples is, you will find one in Sample.cpp. This code
 shows how to use a library to rewrite the negated value from output X to pin Y.
 
-###Including it
+### Including it
 ```cpp
 #include <CxFramework/CxPins.h> // CxPins library
 #include <avr/io.h>	// standard library required for AVR operation
 ```
 
-###Create handles
+### Create handles
 ```cpp
 CxPin my_name(DDRx, y);	// creates a handle to pin y number in the DDRx register
 ```
 
-###Using handles (functions)
+### Using handles (functions)
 ```cpp
 /* pin mode seting */
 my_name.setMode(IN);	// set pin mode to input
@@ -46,7 +46,7 @@ my_name.getValue();	// return LOW or HIGH
 if (my_name.getValue() == HIGH) ;	// for example
 ```
 
-###Using operators
+### Using operators
 ```cpp
 /* pin mode seting */
 my_name = IN;	// set pin mode to input
